@@ -1,3 +1,3 @@
-export const add = (numbers: string) => {
+export const add = (numbers: string): number => {
     return 0;
 };
