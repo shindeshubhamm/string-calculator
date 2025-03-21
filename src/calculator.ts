@@ -9,7 +9,7 @@ export const add = (numbers: string): number => {
     if (numbers.startsWith("//")) {
         const firstNewLine = numbers.indexOf("\n");
         const customDelimiter = numbers.substring(2, firstNewLine);
-        delimiter = new RegExp(`[\n${customDelimiter}]`);
+        delimiter = new RegExp(`[\n,${customDelimiter}]`);
         numbers = numbers.substring(firstNewLine + 1);
     }
 

@@ -22,6 +22,18 @@ describe("Calculator", () => {
         expect(add("//@\n1@2@3@4@5")).toBe(15);
     });
 
+    test("should support existing delimiters with custom delimiters", () => {
+        expect(add("1,2\n3")).toBe(6);
+        expect(add("1\n2,3\n4,5")).toBe(15);
+        expect(add("//;\n1;2\n3;4,5")).toBe(15);
+    });
+
+    test("should support delimiters of any length", () => {
+        expect(add("//***\n1***2***3")).toBe(6);
+        expect(add("//abc\n1abc2abc3")).toBe(6);
+        expect(add("//abcdef\n1abcdef3")).toBe(4);
+    });
+
     test("should throw an exception for negative numbers", () => {
         expect(() => add("-1,2")).toThrow("negative numbers not allowed -1");
         expect(() => add("1,-2,3,-4")).toThrow("negative numbers not allowed -2,-4");
