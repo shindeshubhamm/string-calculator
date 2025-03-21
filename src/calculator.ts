@@ -3,6 +3,6 @@ export const add = (numbers: string): number => {
         return 0;
     }
 
-    const numbersArray = numbers.split(",").map(parseFloat);
+    const numbersArray = numbers.split(/[\n,]/).map(parseFloat);
     return numbersArray.reduce((sum, number) => sum + number, 0);
 };

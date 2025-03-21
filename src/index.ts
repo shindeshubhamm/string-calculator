@@ -7,7 +7,15 @@ const rl = readline.createInterface({
     output: process.stdout,
 });
 
-rl.question("Enter Calculator Input: ", (answer) => {
-    console.log(add(answer));
-    rl.close();
+let input = "";
+
+console.log("Enter Calculator Input (press Ctrl+D when done):");
+
+rl.on("line", (line) => {
+    input += line + "\n";
+});
+
+rl.on("close", () => {
+    input = input.trim();
+    console.log(`Result: ${add(input)}`);
 });

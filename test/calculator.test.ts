@@ -10,4 +10,9 @@ describe("Calculator", () => {
         expect(add("1,2,3")).toBe(6);
         expect(add("1,2,3,4,5")).toBe(15);
     });
+
+    test("should return the sum of any number of comma separated numbers with new lines", () => {
+        expect(add("1\n2,3")).toBe(6);
+        expect(add("1\n2,3\n4,5")).toBe(15);
+    });
 });
