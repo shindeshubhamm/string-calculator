@@ -1,19 +1,26 @@
 {
-  "name": "string-calculator",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "jest"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "packageManager": "pnpm@10.6.2",
-  "devDependencies": {
-    "@types/jest": "^29.5.14",
-    "jest": "^29.7.0",
-    "ts-jest": "^29.2.6",
-    "typescript": "^5.8.2"
-  }
+    "name": "string-calculator",
+    "version": "1.0.0",
+    "description": "A simple CLI based string calculator that demonstrates test driven development (TDD).",
+    "main": "dist/calculator.js",
+    "scripts": {
+        "start": "node dist/calculator.js",
+        "build": "tsc",
+        "test": "jest"
+    },
+    "keywords": [
+        "string-calculator",
+        "calculator",
+        "tdd"
+    ],
+    "author": "shindeshubhamm",
+    "license": "ISC",
+    "packageManager": "pnpm@10.6.2",
+    "devDependencies": {
+        "@types/jest": "^29.5.14",
+        "jest": "^29.7.0",
+        "ts-jest": "^29.2.6",
+        "ts-node": "^10.9.2",
+        "typescript": "^5.8.2"
+    }
 }

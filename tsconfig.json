@@ -3,11 +3,10 @@
         "target": "ES2024",
         "module": "CommonJS",
         "outDir": "./dist",
-        "rootDir": "./",
+        "rootDir": "./src",
         "strict": true,
     },
     "include": [
-        "src",
-        "test"
+        "src"
     ]
 }

@@ -15,3 +15,10 @@ pnpm install
 ```bash
 pnpm test
 ```
+
+## Build and run the program
+
+```bash
+pnpm build
+pnpm start
+```
