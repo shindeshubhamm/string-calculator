@@ -17,5 +17,15 @@ rl.on("line", (line) => {
 
 rl.on("close", () => {
     input = input.trim();
-    console.log(`Result: ${add(input)}`);
+    try {
+        const result = add(input);
+        console.log(`Result: ${result}`);
+    } catch (error) {
+        if (error instanceof Error) {
+            console.error(error.message);
+        } else {
+            console.error("An unknown error occurred");
+        }
+        process.exit(1);
+    }
 });
