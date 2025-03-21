@@ -22,3 +22,14 @@ pnpm test
 pnpm build
 pnpm start
 ```
+
+To enter new line characters, press `Enter`. Multiline input is supported. When done entering input, press `Ctrl+D`.
+
+To use a custom delimiter, start the input with `//` followed by the delimiter and a new line. For example:
+
+```
+//;\n1;2
+```
+
+This will use `;` as the delimiter.
+When using a custom delimiter, the default delimiter `,` is not supported as a delimiter, but `\n` is.
